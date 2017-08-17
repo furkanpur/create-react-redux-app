@@ -1,0 +1,36 @@
+{
+  "name": "create-react-redux-app",
+  "version": "1.0.0",
+  "author": "furkanpur",
+  "homepage": "https://furkanpur.github.io/create-react-redux-app",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "gh-pages": "^1.0.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-redux-i18n": "^1.9.0",
+    "react-router-dom": "^4.1.2",
+    "react-router-redux": "next",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-jest": "^20.0.3",
+    "eslint": "^4.4.1",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.1.2",
+    "jest": "^20.0.4",
+    "prettier": "^1.5.3",
+    "react-scripts": "1.0.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  }
+}

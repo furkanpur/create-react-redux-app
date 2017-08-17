@@ -10,7 +10,9 @@ import {
 } from 'react-redux-i18n';
 import langs from './components/i18n/index';
 
-export const history = createHistory();
+export const history = createHistory({
+    basename: '/create-react-redux-app'
+});
 
 const initialState = {};
 const enhancers = [];

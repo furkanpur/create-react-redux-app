@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { fetchItems } from '../../reducers/github-bio';
+import { fetchItems } from '../../reducers/github';
 
 class GithubBio extends Component {
     constructor(props) {

@@ -1,6 +1,6 @@
 const tr = {
     application: {
-        title: 'i18n ile harika bir uygulama',
+        title: 'i18n ile harika bir uygulama!',
         hello: 'Hello, %{name}!'
     },
     date: {

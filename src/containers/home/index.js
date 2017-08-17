@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import { push } from 'react-router-redux';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Translate } from 'react-redux-i18n';
+import { setLocale, Translate } from 'react-redux-i18n';
 import {
     decrement,
     decrementAsync,
     increment,
     incrementAsync
 } from '../../reducers/counter';
+
+function toggleLang(e, lang) {
+    e.preventDefault();
+
+    return dispatch => dispatch(setLocale(lang === 'tr' ? 'en' : 'tr'));
+}
 
 class Home extends Component {
     constructor(props) {
@@ -23,13 +28,18 @@ class Home extends Component {
             incrementAsync,
             decrementAsync,
             isIncrementing,
-            isDecrementing
+            isDecrementing,
+            toggleLang,
+            i18n
         } = this.props;
 
         return (
             <div>
                 <h1>
                     <Translate value="application.title" />
+                    <button onClick={event => toggleLang(event, i18n.locale)}>
+                        Toggle Language
+                    </button>
                 </h1>
                 <p>
                     Count: {count}
@@ -60,7 +70,8 @@ class Home extends Component {
 const mapStateToProps = state => ({
     count: state.counter.count,
     isIncrementing: state.counter.isIncrementing,
-    isDecrementing: state.counter.isDecrementing
+    isDecrementing: state.counter.isDecrementing,
+    i18n: state.i18n
 });
 
 const mapDispatchToProps = dispatch =>
@@ -69,7 +80,8 @@ const mapDispatchToProps = dispatch =>
             increment,
             incrementAsync,
             decrement,
-            decrementAsync
+            decrementAsync,
+            toggleLang
         },
         dispatch
     );

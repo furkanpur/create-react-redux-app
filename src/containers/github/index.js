@@ -19,11 +19,13 @@ class GithubBio extends Component {
 
         return (
             <div>
-                {fetched
-                    ? <div>
-                          Author: {data.login} <br />Bio: {data.bio}
-                      </div>
-                    : 'Data is fetching'}
+                {fetched ? (
+                    <div>
+                        Author: {data.login} <br />Bio: {data.bio}
+                    </div>
+                ) : (
+                    'Data is fetching'
+                )}
             </div>
         );
     }

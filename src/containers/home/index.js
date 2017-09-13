@@ -41,9 +41,7 @@ class Home extends Component {
                         Toggle Language
                     </button>
                 </h1>
-                <p>
-                    Count: {count}
-                </p>
+                <p>Count: {count}</p>
 
                 <p>
                     <button onClick={increment} disabled={isIncrementing}>

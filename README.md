@@ -1,3 +1,5 @@
+# Note: This repository is no longer maintained. Please do not use this repository directly.
+
 # React Starter App with Redux, i18n, Axios and ESLint
 The aim of this application is to create a React starter app with Redux, Axios, i18n and ESLint.
 
